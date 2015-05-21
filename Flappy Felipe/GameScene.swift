@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+
 enum Layer: CGFloat {
     case Background
     case Foreground
@@ -18,20 +19,18 @@ class GameScene: SKScene {
     let worldNode = SKNode()
     var playableStart: CGFloat = 0
     var playableHeight: CGFloat = 0
+   
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
         addChild(worldNode)
         setupBackground()
+        setupForeground()
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         /* Called when a touch begins */
     }
    
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
-    }
-    
     // Setup Methods
     
     func setupBackground(){
